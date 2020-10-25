@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Hello from './components/Hello';
+import TableData from './components/utils/TableData';
 
 function App() {
   return (
-    <div className="App">
-      <Hello/>
+    <div className="home">
+      <TableData/>
     </div>
   );
 }

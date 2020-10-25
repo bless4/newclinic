@@ -1,5 +1,85 @@
-
-
 .App {
-  text-align: center;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.condition {
+  width: 140px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.country {
+  width: 140px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.language {
+  width: 140px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.btn-upload {
+  float: right;
+  margin-right: 20px;
+}
+
+.btn-send-email {
+  float: right;
+}
+
+.form-data {
+  padding: 10px 0px;
+}
+
+.left-col {
+  padding-right: 10px;
+}
+
+.right-col {
+  padding-left: 10px;
+  ;
+}
+
+.error-message {
+  color: red;
+}
+
+thead[class*="ant-table-thead"] th {
+  background-color: #f0f0f0 !important;
+}
+
+td:nth-child(2) {
+  background-color: #f0f0f0 !important;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+  padding: 7px;
+}
+.ant-table table{ border-collapse: collapse!important;}
+@media only screen and (max-width: 768px){
+  .ant-table-content{overflow: scroll}
+  .ant-select-show-arrow{width: 30%!important;}
+  .ant-table-wrapper{margin-top: 7%;}
+}
+@media only screen and (max-width: 767px){
+  .ant-select-show-arrow {
+      width: 100%!important;
+  }
+  .btn-upload {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 9px;
+  } 
+  .btn-send-email {
+    float: left;
+    margin-right: 3%;
+  }
 }
