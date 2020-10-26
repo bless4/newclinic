@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Table, Select, Button } from 'antd';
+import SimpleReactValidator from 'simple-react-validator';
+import AddSubjectModal from '../../modal/addSubject';
+import UploadSubjectModal from '../../modal/uploadSubject';
+import SendEmailModal from '../../modal/sendEmail';
 import {columns} from './columns';
 import defaultData from './defaultData';
 
@@ -221,7 +225,7 @@ class HomeComponent extends Component {
     })
   }
 
-/*
+
   // upload modal
   showUploadModal = () => {
     this.setState({ uploadModelVisibility: true });
@@ -270,7 +274,7 @@ class HomeComponent extends Component {
         this.setState({ rowArray: this.state.rowArray })
       })
     }
-  }  */
+  }  
 
   render() {
     const { loading, selectedRowKeys, temp, fileRowCounts } = this.state;
