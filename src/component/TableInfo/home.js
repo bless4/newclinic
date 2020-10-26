@@ -262,7 +262,7 @@ class HomeComponent extends Component {
 
   handleSelectRow = (value) => {
     const { rowArray } = this.state;
-    var temp = this.state.rowArray.findIndex(o => o.key == value.key);
+    var temp = this.state.rowArray.findIndex(o => o.key === value.key);
     if (temp === -1) {
       rowArray.push(value);
       this.setState({ rowArray: this.state.rowArray })
@@ -314,7 +314,7 @@ class HomeComponent extends Component {
 
         <Select placeholder="Country" className="country" value={this.state.countryFilter}
          onChange={this.handleChangeCountry.bind(this)} allowClear={true}
-          allowClear={true} onClear={this.clearCountry}>
+           onClear={this.clearCountry}>
           {countries.length > 0 && countries.map((country, index) =>
             <Option value={country} key={index}>{country}</Option>
           )}
@@ -322,7 +322,7 @@ class HomeComponent extends Component {
 
         <Select placeholder="Language" className="language" value={this.state.languageFilter}
          onChange={this.handleChangeLanguage.bind(this)} allowClear={true}
-          allowClear={true} onClear={this.clearLanguage}>
+           onClear={this.clearLanguage}>
           {languages.length > 0 && languages.map((language, index) =>
             <Option value={language} key={index}>{language}</Option>
           )}
