@@ -269,7 +269,7 @@ class HomeComponent extends Component {
     }
     else {
       this.state.rowArray.filter((row, index) => {
-        if (row.key == value.key) {
+        if (row.key === value.key) {
           this.state.rowArray.splice(index, 1)
         }
         this.setState({ rowArray: this.state.rowArray })
@@ -278,7 +278,7 @@ class HomeComponent extends Component {
   }  
 
   render() {
-    const { loading, selectedRowKeys, temp, fileRowCounts } = this.state;
+    const {  selectedRowKeys, temp } = this.state;
     const rowSelection = {
       selectedRowKeys,
       onChange: this.onSelectChange,
@@ -288,37 +288,40 @@ class HomeComponent extends Component {
     if (temp.length > 0) {
       conditions = temp.map(function (obj) { return obj.idc10; });
       conditions = conditions && conditions.filter(function (v, i) {
-        return conditions.indexOf(v) === i && v !== null && v !== "";
+        return conditions.indexOf(v) === i && v != null && v !== "";
       });
 
       countries = temp.map(function (obj) { return obj.country; });
       countries = countries && countries.filter(function (v, i) {
-        return countries.indexOf(v) == i && v !== null && v !== "";
+        return countries.indexOf(v) === i && v !== null && v !== "";
       });
 
       languages = temp.map(function (obj) { return obj.language; });
       languages = languages && languages.filter(function (v, i) {
-        return languages.indexOf(v) == i && v !== null && v !== "";
+        return languages.indexOf(v) === i && v !== null && v !== "";
       });
     }
 
     return (
       <div className="App">
-        <Select placeholder="Condition" value={this.state.conditionFilter} className="condition" onChange={this.handleChangeCondition.bind(this)}
+        <Select placeholder="Condition" value={this.state.conditionFilter}
+         className="condition" onChange={this.handleChangeCondition.bind(this)}
           allowClear={true} onClear={this.clearCondition}>
           {conditions.length > 0 && conditions.map((condition, index) =>
             <Option value={condition} key={index}>{condition}</Option>
           )}
         </Select>
 
-        <Select placeholder="Country" className="country" value={this.state.countryFilter} onChange={this.handleChangeCountry.bind(this)} allowClear={true}
+        <Select placeholder="Country" className="country" value={this.state.countryFilter}
+         onChange={this.handleChangeCountry.bind(this)} allowClear={true}
           allowClear={true} onClear={this.clearCountry}>
           {countries.length > 0 && countries.map((country, index) =>
             <Option value={country} key={index}>{country}</Option>
           )}
         </Select>
 
-        <Select placeholder="Language" className="language" value={this.state.languageFilter} onChange={this.handleChangeLanguage.bind(this)} allowClear={true}
+        <Select placeholder="Language" className="language" value={this.state.languageFilter}
+         onChange={this.handleChangeLanguage.bind(this)} allowClear={true}
           allowClear={true} onClear={this.clearLanguage}>
           {languages.length > 0 && languages.map((language, index) =>
             <Option value={language} key={index}>{language}</Option>

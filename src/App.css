@@ -62,9 +62,10 @@ td:nth-child(2) {
 .ant-table tfoot > tr > th,
 .ant-table tfoot > tr > td {
   padding: 7px;
+  
 }
 .ant-btn-primary, .ant-btn-primary:hover, .ant-btn-primary:focus { background: #002366; border-color: #002366;}
-.ant-table table{ border-collapse: collapse!important;}
+.ant-table table{ border-collapse: collapse!important; font-size: 9px;}
 @media only screen and (max-width: 768px){
   .ant-table-content{overflow: scroll}
   .ant-select-show-arrow{width: 30%!important;}
