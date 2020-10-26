@@ -1,4 +1,4 @@
-const columns = [
+ const columns = [
     {
       title: 'Name',
       dataIndex: 'name',
@@ -66,6 +66,4 @@ const columns = [
       sorter: (a, b) => a.created_at.localeCompare(b.created_at),
     },
   ];
-  export {
-      columns
-  }
+  export default columns;

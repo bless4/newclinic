@@ -4,8 +4,9 @@ import SimpleReactValidator from 'simple-react-validator';
 import AddSubjectModal from '../../modal/addSubject';
 import UploadSubjectModal from '../../modal/uploadSubject';
 import SendEmailModal from '../../modal/sendEmail';
-import {columns} from './columns';
 import defaultData from './defaultData';
+import columns from './columns';
+
 
 
 const { Option } = Select;
