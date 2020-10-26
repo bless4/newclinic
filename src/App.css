@@ -1,5 +1,5 @@
 .App {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-left: 30px;
   margin-right: 30px;
   overflow: hidden;
@@ -30,7 +30,6 @@
 
 .btn-send-email {
   float: right;
-  background-color: #002366;
 }
 
 .form-data {
@@ -64,6 +63,7 @@ td:nth-child(2) {
 .ant-table tfoot > tr > td {
   padding: 7px;
 }
+.ant-btn-primary, .ant-btn-primary:hover, .ant-btn-primary:focus { background: #002366; border-color: #002366;}
 .ant-table table{ border-collapse: collapse!important;}
 @media only screen and (max-width: 768px){
   .ant-table-content{overflow: scroll}
@@ -74,10 +74,11 @@ td:nth-child(2) {
   .ant-select-show-arrow {
       width: 100%!important;
   }
-  .btn-upload {
+  .btn-send-email, .btn-upload {
     float: left;
     margin-right: 20px;
     margin-bottom: 9px;
+    width: 100%;
   } 
   .btn-send-email {
     float: left;
