@@ -30,6 +30,10 @@
 
 .btn-send-email {
   float: right;
+  background-color: #002366;
+}
+.ant-btn-primary btn-upload {
+  background-color: red;
 }
 
 .form-data {
