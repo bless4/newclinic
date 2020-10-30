@@ -246,7 +246,7 @@ class HomeComponent extends Component {
   }
 
   // email modal
-  showEmailModal = () => {
+  showEmailModal = () => { 
     this.setState({ emailModelVisibility: true });
   };
 
